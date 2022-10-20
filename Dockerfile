@@ -10,6 +10,7 @@ COPY ./src src
 COPY tsconfig*.json ./
 RUN npm run build
 
+# Stage 2 : Run prod
 FROM node:18-alpine As production
 
 WORKDIR /usr/src/app
